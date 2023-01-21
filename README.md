@@ -12,9 +12,11 @@
 
 ## Docker 部署
 
- 1. 下载[docker-compose文件](https://github.com/wy580477/NodeStatus-Docker/blob/main/docker-compose.yml)。
+ 1. 目前只有 AMD64 架构支持。
+ 
+ 2. 下载[docker-compose文件](https://github.com/wy580477/NodeStatus-Docker/blob/main/docker-compose.yml)。
 
- 2. 按说明设置好变量，用如下命令运行容器。
+ 3. 按说明设置好变量，用如下命令运行容器。
 
         docker-compose up -d
 
@@ -22,7 +24,7 @@
 
 可以直接使用本库或者 fork 本库，然后在 PaaS 平台上走 CI/CD 流程部署。
 
-支持拉取容器镜像的 PaaS 平台，可以直接拉取本库的容器镜像部署。
+支持拉取容器镜像的 PaaS 平台，可以直接拉取本库的容器镜像 ghcr.io/wy580477/nodestatus-docker:latest 部署。
 
 需要注意数据持久化问题。有两种解决方法：
 
