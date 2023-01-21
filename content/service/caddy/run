@@ -1,0 +1,11 @@
+#!/bin/sh
+
+exec 2>&1
+
+if [ "${NO_AUTH}" = "Enable" ]; then
+    exec caddy run --config /workdir/Caddyfile_noauth --adapter caddyfile
+else
+    HASH="$(caddy hash-password --plaintext ${PASSWORD})"
+    sed -i "s|HASH|${HASH}|" /workdir/Caddyfile
+    exec caddy run --config /workdir/Caddyfile --adapter caddyfile
+fi

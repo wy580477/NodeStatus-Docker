@@ -1,0 +1,6 @@
+{$CADDY_DOMAIN}:{$PORT} {
+	tls {$CADDY_EMAIL}
+	encode gzip
+	respond /healthcheck 200
+	reverse_proxy * localhost:18000
+}
