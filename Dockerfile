@@ -2,7 +2,7 @@ FROM cokemine/nodestatus
 
 COPY ./content /workdir
 
-RUN apk add --no-cache wget runit \
+RUN apk add --no-cache curl runit \
     && sh /workdir/install.sh \
     && rm /workdir/install.sh \
     && chmod +x /workdir/service/*/run \
