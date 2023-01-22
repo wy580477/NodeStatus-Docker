@@ -6,7 +6,13 @@
 		basicauth {
 			{$USER} HASH
 		}
-		reverse_proxy * localhost:18000
+		reverse_proxy * {
+			to localhost:18000
+			trusted_proxies private_ranges
+		}
 	}
-	reverse_proxy * localhost:18000
+	reverse_proxy * {
+		to localhost:18000
+		trusted_proxies private_ranges
+	}
 }

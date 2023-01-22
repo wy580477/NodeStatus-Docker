@@ -2,5 +2,8 @@
 	tls {$CADDY_EMAIL}
 	encode gzip
 	respond /healthcheck 200
-	reverse_proxy * localhost:18000
+	reverse_proxy * {
+		to localhost:18000
+		trusted_proxies private_ranges
+	}
 }
