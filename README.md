@@ -8,7 +8,7 @@
 
 本项目为 NodeStatus 容器集成了 Caddy，只需要在环境变量中设置域名即可全自动申请证书启用 HTTPS，状态页可选用户名/密码认证。
 
-支持部署到 Render 等支持 Dockerfile 的免费 PaaS 服务。
+支持部署到 Koyeb 和 Doprax 等支持 Dockerfile 的免费 PaaS 服务。
 
 ## Docker 部署
 
