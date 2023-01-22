@@ -30,7 +30,7 @@
 
 1. 在支持持久存储卷的 PaaS 平台上（Doprax 等），可以使用默认的 SQLite 数据库，需要将持久存储卷挂载到 "/usr/local/NodeStatus/server/" 。 
 
-2. 在不支持持久存储卷的 PaaS 平台上（Render 等），需要使用外部的 MySQL 或是 PostgreSQL 数据库 （免费数据库服务有 bit.io 等）。
+2. 在不支持持久存储卷的 PaaS 平台上（Koyeb 等），需要连接 MySQL 或是 PostgreSQL 数据库 （免费数据库服务有 bit.io 等）。
 
 在 PaaS 平台上部署时，环境变量设置：
 
