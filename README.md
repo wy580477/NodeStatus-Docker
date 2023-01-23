@@ -13,7 +13,7 @@
 ## Docker 部署
 
  1. 目前只有 AMD64 架构支持。
- 
+
  2. 下载[docker-compose文件](https://github.com/wy580477/NodeStatus-Docker/blob/main/docker-compose.yml)。
 
  3. 按说明设置好变量，用如下命令运行容器。
@@ -28,7 +28,7 @@
 
 需要注意数据持久化问题。有两种解决方法：
 
-1. 在支持持久存储卷的 PaaS 平台上（Doprax 等），可以使用默认的 SQLite 数据库，需要将持久存储卷挂载到 "/usr/local/NodeStatus/server/" 。 
+1. 在支持持久存储卷的 PaaS 平台上（Doprax 等），可以使用默认的 SQLite 数据库，需要将持久存储卷挂载到 "/usr/local/NodeStatus/server/" 。
 
 2. 在不支持持久存储卷的 PaaS 平台上（Koyeb 等），需要连接 MySQL 或是 PostgreSQL 数据库 （免费数据库服务有 bit.io 等）。
 
@@ -39,6 +39,9 @@
 | `USER` | `admin` | 访问状态页用户名 |
 | `PASSWORD` | `password` | 访问状态页密码，务必设置为强密码 |
 | `NO_AUTH` | Disable | 设置为"Enable"则不需要用户名/密码即可访问状态页 |
+| `NO_HEADER` | Disable | 使用 hotaru-theme 主题时，设置为"Enable"将禁用页面顶部图片。如果启用，建议同时将下面两项变量设置为空值，避免标题文字覆盖内容 |
+| `WEB_TITLE` | Server Status | 自定义站点显示标题 |
+| `WEB_SUBTITLE` | Servers' Probes Set up with NodeStatus | 自定义站点显示副标题 |
 | `PORT` | 3000 | 内部 WEB 服务端口，PaaS 平台多数可以自动识别，无需设置 |
 
 其它变量详见：https://github.com/cokemine/nodestatus#environment

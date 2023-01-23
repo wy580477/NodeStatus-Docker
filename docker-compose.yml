@@ -46,8 +46,14 @@ services:
       # Telegram Bot 需要推送的 chat_id, 如不清楚可以先启动 NodeStatus, 对 Bot 发送 /start 获取这个 id, 多个请用 , 隔开。
       TZ: Asia/Shanghai
       # 指定时区。时区列表: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+      NO_HEADER: "Disable"
+      # 使用 hotaru-theme 主题时，设置为"Enable"将禁用页面顶部图片。如果启用，建议同时将下面两项变量设置为空值，避免标题文字覆盖内容。
+      WEB_TITLE: "Server Status"
+      # 自定义站点显示标题
+      WEB_SUBTITLE: "Servers' Probes Set up with NodeStatus"
+      # 自定义站点显示副标题
 
-      # 以下为可选项，不需要修改的请保持默认值。详细说明请参考: https://github.com/cokemine/nodestatus#environment
+      # 以下变量详细说明请参考: https://github.com/cokemine/nodestatus#environment
       VERBOSE: "false"
       PING_INTERVAL: 30
 
@@ -55,8 +61,6 @@ services:
       USE_WEB: "true"
 
       WEB_THEME: "hotaru-theme"
-      WEB_TITLE: "Server Status"
-      WEB_SUBTITLE: "Servers' Probes Set up with NodeStatus"
       WEB_HEADTITLE: "NodeStatus"
 
       PUSH_TIMEOUT: 120
