@@ -32,6 +32,14 @@
 
 2. 在不支持持久存储卷的 PaaS 平台上（Koyeb 等），需要连接 MySQL 或是 PostgreSQL 数据库 （免费数据库服务有 bit.io 等）。
 
+bit.to 免费 PostgreSQL 数据库:
+
+前往 https://bit.io/ 注册账号，并新建一个数据库。
+
+点击数据库名称，进入数据库管理页面，点击左侧的 Connection，复制 "Postgres Connection" 下方字符串即为数据库连接 URL。
+
+注意要把数据库连接 URL 中最后一个 "/" 替换为 "." , 例如结尾的 user/mydatabase 要改为 user.database 。
+
 在 PaaS 平台上部署时，环境变量设置：
 
 | 变量 | 默认值 | 说明 |
