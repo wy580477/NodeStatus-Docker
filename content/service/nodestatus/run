@@ -6,7 +6,7 @@ if [[ "${NO_HEADER}" = "Enable" ]]; then
     sed -i 's@#header{height:25rem;position:relative;background:url(/assets/cover.5733800e.png) no-repeat center center}#header:before{content:"";position:absolute;top:0;left:0;bottom:0;right:0;z-index:1;width:100%;background:rgba(66,64,64,.15)}#header:after{content:"Pixiv: 86597206";position:absolute;right:15px;bottom:0;z-index:2;color:#cdcdcd;text-shadow:1px 1px 1px #666}@@;s@#header{height:20rem;background:url(/assets/cover_mobile.27fb488e.png) no-repeat center center!important}@@' /app/packages/nodestatus-server/build/dist/hotaru-theme/assets/index*.css
 fi
 
-sed -i "s@env("PORT")@env("NODE_PORT")@" /app/packages/nodestatus-server/build/app.js
+sed -i 's@env("PORT")@env("NODE_PORT")@' /app/packages/nodestatus-server/build/app.js
 cd /app
 
 exec pm2-runtime start npm -- start
